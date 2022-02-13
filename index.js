@@ -12,21 +12,40 @@ const questions = [
     type: 'input',
     name: 'description',
     message: 'Write a description of your project.'
+}, {
+    type: 'input',
+    name: 'installation',
+    message: 'How do you install your app?'
+}, {
+    type: 'input',
+    name: 'usage',
+    message: 'How do you use your app?'
+}, {
+    type: 'input',
+    name: 'contribution',
+    message: 'How can other users contribute?'
 }
 
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+    })
+};
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers) => {
+    inquirer.prompt(questions)
+    .then((answers) => {
         console.log(answers);
-        generateMarkdown(answers);
+        writeToFile("README.md", generateMarkdown(answers));
 
-    })
-}
+    });
+};
 
 // Function call to initialize app
 init();
