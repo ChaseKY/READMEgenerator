@@ -24,6 +24,22 @@ const questions = [
     type: 'input',
     name: 'contribution',
     message: 'How can other users contribute?'
+}, {
+    type: 'checkbox',
+    name: 'license',
+    message: 'Chose a license for your project.'
+}, {
+    type: 'input',
+    name: 'test',
+    message: 'What are the testing instructions?'
+}, {
+    type: 'input',
+    name: 'github',
+    message: 'Enter your github username.'
+}, {
+    type: 'input',
+    name: 'email',
+    message: 'Enter your email.'
 }
 
 ];

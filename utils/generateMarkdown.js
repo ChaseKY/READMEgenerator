@@ -14,7 +14,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
   ## License:
-  
+  [![license]()]
   ## Description:
   ${data.description}
   ## Table of Contents
@@ -30,6 +30,8 @@ function generateMarkdown(data) {
   ${data.usage}
   ## Contribution:
   ${data.contribution}
+  ## License:
+  ${data.license}
   ## Testing:
   ${data.test}
   ## Questions:
