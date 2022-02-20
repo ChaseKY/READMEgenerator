@@ -25,9 +25,10 @@ const questions = [
     name: 'contribution',
     message: 'How can other users contribute?'
 }, {
-    type: 'checkbox',
+    type: 'list',
     name: 'license',
-    message: 'Chose a license for your project.'
+    message: 'Chose a license for your project.',
+    choices: ['MIT', 'Apache', 'GNU']
 }, {
     type: 'input',
     name: 'test',
